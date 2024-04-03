@@ -12,8 +12,33 @@ body {
 width: 100vw;
 background-color: #303030;
 color: #ffffff;
+margin: 0;
+}
+
+.header-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.container {
+margin: 0 auto;
+width: 1240px;
+}
+
+.students-list {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+li:nth-child(1) {
+margin-right: 36px;
+}
+
+main {
 background-image: url('./images/classroom-with-desks-and-bookshelves-isometric-digital-art-smog-pollution-toxic-waste-chimneys.jpeg');
-background-size: 100vw 100vh;
+background-size: 100%;
 background-repeat: no-repeat;
 }
 
@@ -40,20 +65,31 @@ color: orchid;
 background-color: transparent;
 text-decoration: underline;
 }
+
+.logo-icon {
+width: 50px;
+height: 50px;
+}
 </style>
 </head>
 <body>
 <header>
+<div class="container header-container">
 <a href="#">
-<img src="#" alt="logo">ENGUS</a>
+<svg class="logo-icon">
+<use href="./images/sprite.svg#logo-icon"></use>
+</svg>
+ENGUS</a>
 <nav>
-<ul>
+<ul class="students-list">
 <li><a href="#">For Pavel</a></li>
 <li><a href="#">For Evgeniy</a></li>
 </ul>
 </nav>
+</div>
 </header>
 <main>
+<div class="container main-container">
 <div>
 <h1>
 ENGUS
@@ -77,8 +113,10 @@ One time life experience:
 </pre>
 </p>
 <p>Why wait? Push that button right now!</p>
+</div>
 </main>
 <footer>
+<div class="container">
 <address>
 <b>Contacts:</b>
 <p>Conan Exile Lands</p>
@@ -86,6 +124,7 @@ One time life experience:
 <p>Under the Rock St.</p>
 <p>ap. 2</p>
 </address>
+</div>
 </footer>
 <h1>The Great English Learning APP!</h1>
 <h2>For Pavel</h2>
