@@ -8,11 +8,40 @@
 <title>ENGUS</title>
 <link rel="icon" type="image/x-icon" href="./images/favicon.svg">
 <style>
+* {
+box-sizing: border-box;
+}
+
 body {
-width: 100vw;
 background-color: #303030;
+background-image: url('./images/classroom-with-desks-and-bookshelves-isometric-digital-art-smog-pollution-toxic-waste-chimneys.jpeg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
 color: #ffffff;
 margin: 0;
+padding: 0;
+position: relative;
+}
+
+pre {
+font-family: inherit;
+}
+
+h1 {
+margin: 0;
+}
+
+p {
+margin: 0;
+}
+
+header {
+width: 100%;
+height: 75px;
+background-color: rgba(25, 25, 25, 0.7);
+position: absolute;
+top: 0;
+left: 0;
 }
 
 .header-container {
@@ -22,14 +51,40 @@ justify-content: space-between;
 }
 
 .container {
-margin: 0 auto;
+height: 100%;
+margin: auto;
 width: 1240px;
 }
 
+.logo-link {
+display: flex;
+align-items: center;
+color: #fff;
+text-decoration: none;
+font-size: 24px;
+font-weight: bold;
+}
+
+.logo-icon {
+width: 50px;
+height: 50px;
+margin-right: 20px;
+}
+
 .students-list {
+list-style-type: none;
 display: flex;
 align-items: center;
 justify-content: space-between;
+}
+
+li a {
+text-decoration: none;
+color: #fff;
+background-color: rgba(23, 23, 23, 0.75);
+padding: 10 36;
+border-radius: 8;
+font-size: 24px;
 }
 
 li:nth-child(1) {
@@ -37,43 +92,65 @@ margin-right: 36px;
 }
 
 main {
-background-image: url('./images/classroom-with-desks-and-bookshelves-isometric-digital-art-smog-pollution-toxic-waste-chimneys.jpeg');
-background-size: 100%;
-background-repeat: no-repeat;
-}
-
-a:link {
-color: lightgray;
-background-color: transparent;
-text-decoration: none;
-}
-
-a:visited {
-color: orange;
-background-color: transparent;
-text-decoration: underline;
-}
-
-a:hover {
-color: greenyellow;
-background-color: transparent;
-text-decoration: none;
-}
-
-a:active {
-color: orchid;
-background-color: transparent;
-text-decoration: underline;
-}
-
-.logo-icon {
-width: 50px;
-height: 50px;
-}
-
-header {
 position: absolute;
 top: 0;
+left: 0;
+z-index: -1;
+width: 100%;
+padding-top: 115px;
+padding-bottom: 265px;
+}
+
+.main-container {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.div-padding {
+width: 630px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.h1-back {
+padding: 65px 55px;
+background-color: rgba(30, 30, 30, .7);
+border-radius: 15px;
+}
+
+.start-now {
+background-color: #232323;
+border-style: none;
+width: 200px;
+padding: 20px 36px;
+border-radius: 10px;
+margin: 100px auto 0;
+color: #fff;
+font-size: 20px;
+}
+
+.div-text {
+width: 600px;
+overflow: hidden;
+}
+
+.main-title {
+font-size: 72px;
+font-weight: bold;
+text-align: center;
+}
+
+.main-title-text {
+font-size: 64px;
+text-align: center;
+}
+
+footer {
+height: 175px;
+position: absolute;
+bottom: 0;
 left: 0;
 }
 
@@ -82,28 +159,31 @@ left: 0;
 <body>
 <header>
 <div class="container header-container">
-<a href="#">
+<a href="#" class="logo-link">
 <svg class="logo-icon">
 <use href="./images/sprite.svg#logo-icon"></use>
 </svg>
 ENGUS</a>
 <nav>
 <ul class="students-list">
-<li><a href="#">For Pavel</a></li>
-<li><a href="#">For Evgeniy</a></li>
+<li><a href="./html/pavel.html" target="_blank" title="Go get your homework here, Pavel!">For Pavel</a></li>
+<li><a href="./html/evgeniy.html" target="_blank" title="Go get your homework here, Evgeniy!">For Evgeniy</a></li>
 </ul>
 </nav>
 </div>
 </header>
 <main>
 <div class="container main-container">
-<div>
-<h1>
+<div class="div-padding">
+<div class="h1-back">
+<h1 class="main-title">
 ENGUS
 </h1>
-<p>LEARN <b>ENG</b>LISH<br>WITH <b>US</b></p>
+<p class="main-title-text">LEARN <b>ENG</b>LISH<br>WITH <b>US</b></p>
 </div>
-<button type="button" title="This button does nothing!">START NOW</button>
+<button type="button" title="This button does nothing!" class="start-now">START NOW</button>
+</div>
+<div class="div-text">
 <h2>Benefits of learning with us:</h2>
 <p>
 <pre>
@@ -133,10 +213,3 @@ One time life experience:
 </address>
 </div>
 </footer>
-<h1>The Great English Learning APP!</h1>
-<h2>For Pavel</h2>
-<a href="./html/pavel.html" target="_blank" style="display: inline-flex; align-items: center" title="Go get your homework here, Pavel!"><span style="margin-right: 10px">Click here, Pavel!</span><img src="./images/arrow.svg" alt="arrow icon" width="28px" height="28px"></a>
-<h2>For Evgeniy</h2>
-<a href="./html/evgeniy.html" target="_blank" style="display: inline-flex; align-items: center" title="Go get your homework here, Evgeniy!"><span style="margin-right: 10px">Click here, Evgeniy!</span><img src="./images/arrow.svg" alt="arrow icon" width="28px" height="28px"></a>
-</body>
-</html>
