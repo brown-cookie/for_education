@@ -21,17 +21,14 @@ color: #ffffff;
 margin: 0;
 padding: 0;
 position: relative;
+min-height: 1024px;
 }
 
 pre {
 font-family: inherit;
 }
 
-h1 {
-margin: 0;
-}
-
-p {
+h1, h2, p {
 margin: 0;
 }
 
@@ -87,6 +84,14 @@ border-radius: 8;
 font-size: 24px;
 }
 
+li a:hover, li a:focus {
+color: darkorange;
+}
+
+li a:active {
+color: red;
+}
+
 li:nth-child(1) {
 margin-right: 36px;
 }
@@ -112,6 +117,8 @@ width: 630px;
 display: flex;
 flex-direction: column;
 justify-content: center;
+margin-right: 5px;
+padding-top: 90px;
 }
 
 .h1-back {
@@ -133,7 +140,21 @@ font-size: 20px;
 
 .div-text {
 width: 600px;
-overflow: hidden;
+}
+
+.div-text h2 {
+padding: 36px;
+background-color: rgba(30, 30, 30, .7);
+border-radius: 15px;
+font-size: 64px;
+}
+
+.div-text p {
+padding: 36px;
+background-color: rgba(30, 30, 30, .7);
+border-radius: 15px;
+font-size: 20px;
+margin-top: 15px;
 }
 
 .main-title {
@@ -148,12 +169,19 @@ text-align: center;
 }
 
 footer {
+width: 100%;
 height: 175px;
 position: absolute;
 bottom: 0;
 left: 0;
+background-color: rgba(25, 25, 25, 0.7);
 }
 
+.footer-container {
+display: flex;
+align-items: center;
+padding-left: 15px;
+}
 </style>
 </head>
 <body>
@@ -166,8 +194,8 @@ left: 0;
 ENGUS</a>
 <nav>
 <ul class="students-list">
-<li><a href="./html/pavel.html" target="_blank" title="Go get your homework here, Pavel!">For Pavel</a></li>
-<li><a href="./html/evgeniy.html" target="_blank" title="Go get your homework here, Evgeniy!">For Evgeniy</a></li>
+<li><a href="./html/pavel.html" title="Go get your homework here, Pavel!">For Pavel</a></li>
+<li><a href="./html/evgeniy.html" title="Go get your homework here, Evgeniy!">For Evgeniy</a></li>
 </ul>
 </nav>
 </div>
@@ -186,24 +214,20 @@ ENGUS
 <div class="div-text">
 <h2>Benefits of learning with us:</h2>
 <p>
-<pre>
-A unique chance to master your English language skills with our high educated teachers. Among which:
-- drunken sailors;
-- hysterical housewives;
+A unique chance to master your English language skills with our high educated teachers. Among which:<br>
+- drunken sailors;<br>
+- hysterical housewives;<br>
 - former prisoners of azkaban.
-</pre>
 </p>
 <p>
-<pre>
-One time life experience:
+One time life experience:<br>
 - you don’t want it to happen again.
-</pre>
 </p>
 <p>Why wait? Push that button right now!</p>
 </div>
 </main>
 <footer>
-<div class="container">
+<div class="container footer-container">
 <address>
 <b>Contacts:</b>
 <p>Conan Exile Lands</p>
